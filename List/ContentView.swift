@@ -8,19 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var data : List
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack{
+            
+            
+            Form {
+                
+                ForEach($data.listitem){$Listitem in
+                    Toggle(Listitem.name, isOn: $Listitem.state)
+                }
+                .onDelete { indexSet in
+                    data.listitem.remove(atOffsets: indexSet)
+                }
+                
+            }
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink("Add") {
+                        ListitemView()
+                            .navigationTitle("Add Item")
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(List())
     }
 }
