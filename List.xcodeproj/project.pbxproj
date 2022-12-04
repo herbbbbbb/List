@@ -11,6 +11,8 @@
 		435EA596293CD07F00D03BEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EA595293CD07F00D03BEE /* ContentView.swift */; };
 		435EA598293CD08800D03BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435EA597293CD08800D03BEE /* Assets.xcassets */; };
 		435EA59B293CD08800D03BEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435EA59A293CD08800D03BEE /* Preview Assets.xcassets */; };
+		435EA5A2293CD0B700D03BEE /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EA5A1293CD0B700D03BEE /* List.swift */; };
+		435EA5A4293CD12500D03BEE /* ListitemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EA5A3293CD12500D03BEE /* ListitemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		435EA595293CD07F00D03BEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		435EA597293CD08800D03BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		435EA59A293CD08800D03BEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		435EA5A1293CD0B700D03BEE /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		435EA5A3293CD12500D03BEE /* ListitemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListitemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				435EA595293CD07F00D03BEE /* ContentView.swift */,
 				435EA597293CD08800D03BEE /* Assets.xcassets */,
 				435EA599293CD08800D03BEE /* Preview Content */,
+				435EA5A1293CD0B700D03BEE /* List.swift */,
+				435EA5A3293CD12500D03BEE /* ListitemView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				435EA596293CD07F00D03BEE /* ContentView.swift in Sources */,
 				435EA594293CD07F00D03BEE /* ListApp.swift in Sources */,
+				435EA5A2293CD0B700D03BEE /* List.swift in Sources */,
+				435EA5A4293CD12500D03BEE /* ListitemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
