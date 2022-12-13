@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct ListApp: App {
-    @StateObject var data = List()
+    @StateObject private var dataController = DataController()
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(List())
+            ContentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
