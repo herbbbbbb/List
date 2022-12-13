@@ -44,7 +44,10 @@ struct ContentView: View {
         }
     }
     private func deleteItem(offsets: IndexSet){
-         //pass
+        withAnimation{
+            offsets.map{item[$0]}.forEach(manageObjContext.delete)
+            DataController().save(context: manageObjContext)
+        }
     }
     
     private func totalItemNotCheked() -> Double{
