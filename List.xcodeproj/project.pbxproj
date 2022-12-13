@@ -12,6 +12,7 @@
 		435EA598293CD08800D03BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435EA597293CD08800D03BEE /* Assets.xcassets */; };
 		435EA59B293CD08800D03BEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435EA59A293CD08800D03BEE /* Preview Assets.xcassets */; };
 		435EA5A4293CD12500D03BEE /* AdditemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435EA5A3293CD12500D03BEE /* AdditemView.swift */; };
+		F54E8B462948D8E600B4F327 /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F54E8B452948D8E600B4F327 /* ToDo.rtf */; };
 		F5D4C1982948D06400953F85 /* ItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D4C1962948D06400953F85 /* ItemModel.xcdatamodeld */; };
 		F5D4C19A2948D0C200953F85 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D4C1992948D0C200953F85 /* DataController.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		435EA597293CD08800D03BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		435EA59A293CD08800D03BEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		435EA5A3293CD12500D03BEE /* AdditemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditemView.swift; sourceTree = "<group>"; };
+		F54E8B452948D8E600B4F327 /* ToDo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
 		F5D4C1972948D06400953F85 /* ItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItemModel.xcdatamodel; sourceTree = "<group>"; };
 		F5D4C1992948D0C200953F85 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +43,7 @@
 		435EA587293CD07E00D03BEE = {
 			isa = PBXGroup;
 			children = (
+				F54E8B452948D8E600B4F327 /* ToDo.rtf */,
 				435EA592293CD07F00D03BEE /* List */,
 				435EA591293CD07F00D03BEE /* Products */,
 			);
@@ -152,6 +155,7 @@
 			files = (
 				435EA59B293CD08800D03BEE /* Preview Assets.xcassets in Resources */,
 				435EA598293CD08800D03BEE /* Assets.xcassets in Resources */,
+				F54E8B462948D8E600B4F327 /* ToDo.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
