@@ -12,9 +12,6 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var manageObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.state)]) var item:FetchedResults<MyItem>
     
-    @State private var showingAddView = false
-    @State public var state: Bool = false
-    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading){
