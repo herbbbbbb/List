@@ -23,6 +23,7 @@ struct ContentView: View {
                         HStack{
                             Image(systemName: item.state ? "checkmark.circle.fill" : "circle")
                                 .imageScale(.large)
+                                .foregroundColor(ColorDecoder(color: item.mycolor))
                                 .onTapGesture {
                                     item.state = !item.state
                                     DataController().save(context: manageObjContext)
