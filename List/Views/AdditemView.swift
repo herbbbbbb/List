@@ -12,33 +12,69 @@ struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var color: Int16 = 0
+    @State private var selected: Int16 = 1
     
     var body: some View {
         Form{
-            Section{
-                VStack{
-                    TextField("Item name", text: $name)
+           
+            VStack{
+                TextField("Item name", text: $name)
 
-                }
-                HStack{
-                    Image(systemName: "circle")
-                    Image(systemName: "circle")
-                    Image(systemName: "circle")
-                }
-                HStack{
-                    //Spacer()
-                    Button("Submit"){
-                        DataController().addItem(name: name, context: manageObjContext)
-                        dismiss()
+            }
+            HStack{
+                Image(systemName: mark(Color: 1))
+                    .onTapGesture {
+                        selected = 1
                     }
-                    //Spacer()
+                    .foregroundColor(.red)
+                
+                Image(systemName: mark(Color: 2))
+                    .onTapGesture {
+                        selected = 2
+                    }
+                    .foregroundColor(.blue)
+
+                Image(systemName: mark(Color: 3))
+                    .onTapGesture {
+                        selected = 3
+                    }
+                    .foregroundColor(.green)
+                
+                Image(systemName: mark(Color: 4))
+                    .onTapGesture {
+                        selected = 4
+                    }
+                    .foregroundColor(.yellow)
+
+            }
+            HStack{
+
+                Button("Submit"){
+                    DataController().addItem(name: name, mycolor: selected, context: manageObjContext)
+                    dismiss()
                 }
+                //Spacer()
+            }
                 
                 
              
-            }
+            
         }
+    }
+    private func mark(Color: Int) -> String{
+        var mark : String = "circle"
+        
+        if (Color==selected)
+        {
+            mark = "circle.fill"
+        }
+        else
+        {
+            mark = "circle"
+        }
+    
+        
+        return mark
     }
 }
 

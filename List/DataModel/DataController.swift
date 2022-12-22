@@ -28,12 +28,13 @@ class DataController: ObservableObject{
         }
     }
     
-    func  addItem(name: String, context: NSManagedObjectContext){
+    func  addItem(name: String, mycolor: Int16, context: NSManagedObjectContext){
         let item = MyItem(context: context)
         item.id = UUID()
         item.date = Date()
         item.state = false
         item.name = name
+        item.mycolor = mycolor
         
         save(context: context)
     }
