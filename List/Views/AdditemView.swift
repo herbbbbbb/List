@@ -27,24 +27,28 @@ struct AddItemView: View {
                         selected = 1
                     }
                     .foregroundColor(.red)
+                    .imageScale(.large)
                 
                 Image(systemName: mark(Color: 2))
                     .onTapGesture {
                         selected = 2
                     }
                     .foregroundColor(.blue)
+                    .imageScale(.large)
 
                 Image(systemName: mark(Color: 3))
                     .onTapGesture {
                         selected = 3
                     }
                     .foregroundColor(.green)
-                
+                    .imageScale(.large)
+
                 Image(systemName: mark(Color: 4))
                     .onTapGesture {
                         selected = 4
                     }
                     .foregroundColor(.yellow)
+                    .imageScale(.large)
 
             }
             HStack{
