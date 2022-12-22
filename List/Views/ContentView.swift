@@ -53,6 +53,26 @@ struct ContentView: View {
         }
     }
     
+    private func ColorDecoder(color: Int16) -> Color{
+        switch color{
+            
+        case 1:
+            return .red
+            
+        case 2:
+            return .blue
+            
+        case 3:
+            return .green
+            
+        case 4:
+            return .yellow
+            
+        default:
+            return .black
+        }
+    }
+    
     private func totalItemNotCheked() -> Int{
         
         var r:Int = 0
@@ -63,7 +83,6 @@ struct ContentView: View {
             }
         }
         return r
-        
     }
     
 }
