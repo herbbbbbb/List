@@ -12,18 +12,20 @@ struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var state = false
+    @State private var color: Int16 = 0
     
     var body: some View {
         Form{
             Section{
-                TextField("Item name", text: $name)
-                    
                 VStack{
-                    
+                    TextField("Item name", text: $name)
+
                 }
-                //.padding()
-                
+                HStack{
+                    Image(systemName: "circle")
+                    Image(systemName: "circle")
+                    Image(systemName: "circle")
+                }
                 HStack{
                     //Spacer()
                     Button("Submit"){
