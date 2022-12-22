@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var manageObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.state)]) var item:FetchedResults<MyItem>
     
-    var body: some View {
+    var body: some View{
         NavigationView {
             VStack(alignment: .leading){
                 Text("Items not checked \(Int(totalItemNotCheked()))")
@@ -22,6 +22,7 @@ struct ContentView: View {
                     ForEach(item){ item in
                         HStack{
                             Image(systemName: item.state ? "checkmark.circle.fill" : "circle")
+                                .imageScale(.large)
                                 .onTapGesture {
                                     item.state = !item.state
                                     DataController().save(context: manageObjContext)
@@ -43,6 +44,7 @@ struct ContentView: View {
             }
         }
     }
+    
     private func deleteItem(offsets: IndexSet){
         withAnimation{
             offsets.map{item[$0]}.forEach(manageObjContext.delete)
@@ -50,8 +52,17 @@ struct ContentView: View {
         }
     }
     
-    private func totalItemNotCheked() -> Double{
-        return 0.0
+    private func totalItemNotCheked() -> Int{
+        
+        var r:Int = 0
+        
+        for i in item {
+            if i.state == false{
+                r = r + 1
+            }
+        }
+        return r
+        
     }
     
 }
